@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Audioplayer
+
+  Created by Paolo Rossignoli on 12/03/14.
+  Copyright (c) 2012 Azero srl. All rights reserved.
+*/
+//PRViewController
+"textDescription" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id nisl quis felis ultrices bibendum sit amet id nunc. Nulla vehicula bibendum arcu.";
+"Select songs to anlized..." = "Select songs to anlized...";
+"mediaPikerSelectButton" = "Select songs";
+"playSelectedSongsButton" = "Play selected songs";

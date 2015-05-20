@@ -1,0 +1,25 @@
+PODS:
+  - EFCircularSlider (0.2.0)
+  - FXBlurView (1.6.1)
+  - GVMusicPlayerController (0.4.0)
+  - NAKPlaybackIndicatorView (0.0.3)
+  - SwipeView (1.3.2)
+  - YISplashScreen (1.2.1)
+
+DEPENDENCIES:
+  - EFCircularSlider (~> 0.2.0)
+  - FXBlurView
+  - GVMusicPlayerController (~> 0.4)
+  - NAKPlaybackIndicatorView
+  - SwipeView
+  - YISplashScreen (~> 1.2.1)
+
+SPEC CHECKSUMS:
+  EFCircularSlider: f6a2e3a3a960626a075fc2e5ffbc7eedd1798c10
+  FXBlurView: 855a881c8b5f89829748070928aa9447c3d3c726
+  GVMusicPlayerController: 65271ec54f3aab122d8ea517f7b841479ec3e842
+  NAKPlaybackIndicatorView: dc28e51c6c099a6caf2928e82e1bda86217d6c2b
+  SwipeView: 921899ab175cda7a8aeac5ba1977413f9647c5d0
+  YISplashScreen: f964bc6cfec9b73157f28242c85e0fbf89068ba7
+
+COCOAPODS: 0.32.1
