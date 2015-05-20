@@ -37,7 +37,7 @@
         loaded = YES;
         [PRAppDelegate storyBoradAutoLay:self.view];
     }
-    self.tableView.frame = CGRectMake(x, y, self.tableView.frame.size.width, self.tableView.frame.size.width);
+    self.tableView.frame = CGRectMake(x, y, self.tableView.frame.size.width, self.tableView.frame.size.height);
 
     
 }
