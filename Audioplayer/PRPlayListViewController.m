@@ -87,16 +87,22 @@
        MPMediaQuery *myPlaylistsQuery = [MPMediaQuery playlistsQuery];
     NSArray *playlists = [myPlaylistsQuery collections];
     for (MPMediaPlaylist *playlist in playlists) {
-        NSString *playListName = [playlist valueForProperty: MPMediaPlaylistPropertyName];
-        [self.playList addObject:playListName];
-        NSLog (@"%@", [playlist valueForProperty: MPMediaPlaylistPropertyName]);
-        NSArray *songs = [playlist items];
-        for (MPMediaItem *song in songs) {
-            NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
-            NSLog (@"\t\t%@", songTitle);
+        int playListAttributes = [[playlist valueForProperty: MPMediaPlaylistPropertyPlaylistAttributes] intValue];
+        
+        // Does the play list have no attributes or the 'On The Go' attribute
+        if( playListAttributes == MPMediaPlaylistAttributeNone || playListAttributes & MPMediaPlaylistAttributeOnTheGo ) {
+            NSString *playListName = [playlist valueForProperty: MPMediaPlaylistPropertyName];
+
+            [self.playList addObject:playListName];
+            NSLog (@"%@", [playlist valueForProperty: MPMediaPlaylistPropertyName]);
+            NSArray *songs = [playlist items];
+            for (MPMediaItem *song in songs) {
+                NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
+                NSLog (@"\t\t%@", songTitle);
+            }
+            MPMediaItemCollection *mediaItemCollection = [[MPMediaItemCollection alloc]initWithItems:songs];
+            self.playListSongs[playListName] = mediaItemCollection;
         }
-        MPMediaItemCollection *mediaItemCollection = [[MPMediaItemCollection alloc]initWithItems:songs];
-        self.playListSongs[playListName] = mediaItemCollection;
     }
     [self.tableView reloadData];
 }
